@@ -5,9 +5,13 @@ import store from './store'
 
 import './styles.scss'
 
-// Uncommment the following to see NativeScript-Vue output logs
+// Debug mode
 Vue.config.silent = false
 
+// Plugins
+Vue.registerElement('MapboxView', () => require('nativescript-mapbox').MapboxView)
+
+// App
 const app = new Vue({
   router,
   store,
